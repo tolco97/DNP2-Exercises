@@ -62,10 +62,7 @@ namespace LinqExercises
             }
             
             // Print out
-            foreach (string[] group in groups)
-            {
-                Console.WriteLine(string.Join(" ", group));
-            }
+            groups.ForEach(group => Console.WriteLine(string.Join(" ", group)));
         }
     }
 }
