@@ -9,13 +9,13 @@ namespace LinqExercises
     {
         static void Main(string[] args)
         {
-            Exercise1();
+            Exercise1A();
+            Exercise1B();
             Exercise2();
             Exercise3();
-            Exercise4();
         }
 
-        private static void Exercise1()
+        private static void Exercise1A()
         {
             var names = new[] { "Kim", "Kurt", "Karsten", "Klaus", "Kay" };
             var queryResult = names.Select(name => name.Replace("K", "C"));
@@ -23,7 +23,7 @@ namespace LinqExercises
             Console.WriteLine();
         }
 
-        private static void Exercise2()
+        private static void Exercise1B()
         {
             var names = new[] { "Kim", "Kurt", "Karsten", "Klaus", "Kay" };
             var queryResult = names.Select(name => Regex.Replace(name, "[aeiou]\\B", string.Empty, RegexOptions.IgnoreCase));
@@ -31,7 +31,7 @@ namespace LinqExercises
             Console.WriteLine();
         }
 
-        private static void Exercise3()
+        private static void Exercise2()
         {
             var numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             var queryResult = numbers.Select(num => num * 5);
@@ -39,11 +39,11 @@ namespace LinqExercises
             Console.WriteLine();
         }
 
-        private static void Exercise4()
+        private static void Exercise3()
         {
             const int groupSize = 3;
 
-            var letters = new[] { "a", "b", "c", "d", "e", "f", "g", "h"};
+            var letters = new[] { "a", "b", "c", "d", "e", "f", "g", "h" };
             
             // Calculate number of groups
             var numOfGroups = letters.Length / groupSize;
